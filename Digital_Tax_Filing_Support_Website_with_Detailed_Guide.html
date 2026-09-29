@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TaxEase | Digital Tax Filing Support</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;line-height:1.6;color:#172033;background:#f7f9fc}
+header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.nav{max-width:1150px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:15px 20px}
+.logo{font-size:24px;font-weight:800;color:#1769aa}
+.logo span{color:#18a06f}
+nav a{text-decoration:none;color:#26364a;margin-left:22px;font-weight:600}
+nav a:hover{color:#1769aa}
+.menu{display:none;font-size:27px;cursor:pointer}
+.hero{background:linear-gradient(135deg,#eaf6ff,#eafbf4);padding:90px 20px}
+.hero-inner{max-width:1150px;margin:auto;display:grid;grid-template-columns:1.15fr .85fr;gap:45px;align-items:center}
+.badge{display:inline-block;background:#fff;padding:8px 14px;border-radius:30px;color:#1769aa;font-weight:700;margin-bottom:18px}
+h1{font-size:48px;line-height:1.12;margin-bottom:20px}
+.hero p{font-size:18px;color:#526174;margin-bottom:28px}
+.btn{display:inline-block;text-decoration:none;padding:13px 20px;border-radius:9px;font-weight:700;margin-right:10px;cursor:pointer;border:0}
+.primary{background:#1769aa;color:#fff}.secondary{background:#fff;color:#1769aa;border:1px solid #d4e0ea}
+.hero-card{background:#fff;border-radius:18px;padding:30px;box-shadow:0 15px 40px rgba(30,70,100,.12)}
+.hero-card h3{margin-bottom:18px}
+.check{padding:10px 0;border-bottom:1px solid #edf0f4}.check:last-child{border:0}
+section{padding:75px 20px}
+.container{max-width:1150px;margin:auto}
+.title{text-align:center;margin-bottom:42px}
+.title h2{font-size:34px;margin-bottom:10px}
+.title p{color:#667487}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;padding:28px;border-radius:15px;box-shadow:0 5px 22px rgba(20,40,60,.07);border:1px solid #edf1f5}
+.icon{font-size:34px;margin-bottom:12px}.card h3{margin-bottom:8px}.card p{color:#617083}
+.steps{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.step{background:#fff;padding:24px;border-radius:14px;border-top:4px solid #18a06f}
+.number{font-size:28px;font-weight:800;color:#18a06f}
+.info{background:#eef7ff}
+.tax-table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden}
+.tax-table th,.tax-table td{padding:15px;text-align:left;border-bottom:1px solid #e6ebf0}
+.tax-table th{background:#1769aa;color:#fff}
+.faq{max-width:850px;margin:auto}
+details{background:#fff;margin:12px 0;padding:18px 20px;border-radius:10px;box-shadow:0 3px 12px rgba(0,0,0,.05)}
+summary{font-weight:700;cursor:pointer}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+form{background:#fff;padding:28px;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,.06)}
+input,textarea{width:100%;padding:13px;margin:8px 0 15px;border:1px solid #d7dee7;border-radius:8px;font:inherit}
+textarea{min-height:120px;resize:vertical}
+footer{background:#142235;color:#dce5ef;text-align:center;padding:30px 20px}
+footer a{color:#9ed5ff;text-decoration:none}
+.notice{margin-top:18px;font-size:13px;color:#687789}
+@media(max-width:800px){
+nav{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;padding:15px 20px}
+nav.show{display:flex;flex-direction:column}
+nav a{margin:10px 0}.menu{display:block}
+.hero-inner,.contact{grid-template-columns:1fr}
+h1{font-size:38px}.cards{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}
+}
+@media(max-width:520px){.cards,.steps{grid-template-columns:1fr}.hero{padding:60px 20px}h1{font-size:34px}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="nav">
+<div class="logo">Tax<span>Ease</span></div>
+<div class="menu" onclick="toggleMenu()">☰</div>
+<nav id="nav">
+<a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a>
+<a href="#guide">Guide</a><a href="#faq">FAQ</a><a href="#contact">Contact</a><a href="#feedback">Feedback</a>
+</nav>
+</div>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div class="hero-inner">
+<div>
+<div class="badge">CEP Project • Small Business Support</div>
+<h1>Digital Tax Filing Support for Small Businesses</h1>
+<p>Helping small business owners understand digital tax filing, organize documents, avoid common mistakes, and confidently use online tax services.</p>
+<a class="btn primary" href="#guide">Start the Guide</a>
+<a class="btn secondary" href="#services">Explore Services</a>
+</div>
+<div class="hero-card">
+<h3>Why digital tax filing?</h3>
+<div class="check">✓ Faster and more convenient filing</div>
+<div class="check">✓ Reduced paperwork and manual errors</div>
+<div class="check">✓ Easy access to filing records</div>
+<div class="check">✓ Better awareness of tax deadlines</div>
+<div class="check">✓ Supports transparent business practices</div>
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="container">
+<div class="title"><h2>About the Project</h2><p>A simple awareness and support platform for small businesses.</p></div>
+<div class="cards">
+<div class="card"><div class="icon">🎯</div><h3>Objective</h3><p>To create awareness about digital tax filing and help small businesses understand the basic filing process.</p></div>
+<div class="card"><div class="icon">📚</div><h3>Awareness</h3><p>Explain tax-related digital services, required documents, deadlines, and common filing challenges in simple language.</p></div>
+<div class="card"><div class="icon">🤝</div><h3>Community Support</h3><p>Encourage business owners to adopt digital tools and seek professional assistance when necessary.</p></div>
+</div>
+</div>
+</section>
+
+<section class="info" id="services">
+<div class="container">
+<div class="title"><h2>Support Services</h2><p>Information designed for beginners and small business owners.</p></div>
+<div class="cards">
+<div class="card"><div class="icon">🧾</div><h3>Document Checklist</h3><p>Learn which invoices, income records, expense records, bank details, and tax documents may be needed.</p></div>
+<div class="card"><div class="icon">💻</div><h3>Online Filing Guidance</h3><p>Understand the general steps involved in registering, preparing information, reviewing, and submitting a tax return online.</p></div>
+<div class="card"><div class="icon">📅</div><h3>Deadline Awareness</h3><p>Maintain a calendar of applicable GST, income-tax, and other compliance deadlines.</p></div>
+<div class="card"><div class="icon">🔐</div><h3>Digital Safety</h3><p>Use strong passwords, official websites, secure devices, and never share OTPs or confidential login details.</p></div>
+<div class="card"><div class="icon">📊</div><h3>Record Keeping</h3><p>Keep organized digital records of sales, purchases, expenses, invoices, and submitted returns.</p></div>
+<div class="card"><div class="icon">👨‍💼</div><h3>Professional Help</h3><p>For complicated tax situations, consult a qualified tax professional or chartered accountant.</p></div>
+</div>
+</div>
+</section>
+
+<section id="guide">
+<div class="container">
+<div class="title">
+<h2>Step-by-Step Digital Tax Filing Guide</h2>
+<p>A practical India-focused guide. Always check the official portal for the latest rules, forms, deadlines and eligibility.</p>
+</div>
+
+<div class="steps">
+<div class="step"><div class="number">01</div><h3>Prepare Your Documents</h3>
+<p>Keep your PAN, Aadhaar, bank details, sales and purchase records, invoices, expense records, TDS details, previous return and other applicable tax documents ready.</p></div>
+
+<div class="step"><div class="number">02</div><h3>Check Your Tax Requirement</h3>
+<p>Identify whether you need to file an Income Tax Return, GST return, TDS statement, or another applicable form. Requirements depend on your taxpayer/business situation.</p></div>
+
+<div class="step"><div class="number">03</div><h3>Use the Official Income Tax Portal</h3>
+<p>For income-tax returns and related services, use the official Income Tax Department e-Filing portal. Do not use unofficial websites for filing or entering sensitive information.</p>
+<a class="btn secondary" href="https://www.incometax.gov.in/iec/foportal/" target="_blank" rel="noopener">Open Income Tax e-Filing ↗</a></div>
+
+<div class="step"><div class="number">04</div><h3>Register or Log In</h3>
+<p>If you are a new taxpayer, register using an active PAN and the required contact details. Existing users can log in to access e-Filing services.</p></div>
+
+<div class="step"><div class="number">05</div><h3>Select the Correct Return/Form</h3>
+<p>Choose the applicable ITR or tax form for your taxpayer category and assessment year. Read the eligibility conditions before proceeding.</p></div>
+
+<div class="step"><div class="number">06</div><h3>Enter and Verify Information</h3>
+<p>Enter income, deductions, taxes paid, bank information and other required details. Compare the information with your records and available tax statements before submitting.</p></div>
+
+<div class="step"><div class="number">07</div><h3>Check Your Tax Calculation</h3>
+<p>Review the calculated tax, refund or amount payable. If tax is payable, follow the portal's applicable payment process before completing the return.</p></div>
+
+<div class="step"><div class="number">08</div><h3>Submit the Return</h3>
+<p>Preview the return, check all declarations and submit it through the applicable online filing process. Follow the portal instructions for verification.</p></div>
+
+<div class="step"><div class="number">09</div><h3>Complete e-Verification</h3>
+<p>Complete the applicable e-Verification process after filing. Keep the acknowledgement/ITR-V and other filing records safely for future reference.</p></div>
+
+<div class="step"><div class="number">10</div><h3>Track Your Filing</h3>
+<p>Use the official e-Filing portal to check return status, notices, refunds, filed forms and other available services. Keep digital backups of important records.</p></div>
+</div>
+
+<div class="card" style="margin-top:28px">
+<h3>Official Government Filing Portals</h3>
+<p style="margin-top:10px;color:#617083">Use these official portals when the service applies to you:</p>
+<div style="margin-top:16px;display:grid;gap:12px">
+<p><strong>Income Tax:</strong> <a href="https://www.incometax.gov.in/iec/foportal/" target="_blank" rel="noopener">Income Tax Department e-Filing Portal ↗</a></p>
+<p><strong>GST:</strong> <a href="https://www.gst.gov.in/" target="_blank" rel="noopener">GST Portal ↗</a></p>
+<p><strong>TDS/TCS:</strong> <a href="https://traces61.tdscpc.gov.in/app/" target="_blank" rel="noopener">TRACES ↗</a></p>
+</div>
+<p class="notice">Security reminder: use official government domains, check the website address before logging in, and never share your password, PIN or OTP with anyone.</p>
+</div>
+</div>
+</section>
+
+<section class="info">
+<div class="container">
+<div class="title"><h2>Common Digital Tax Areas</h2><p>Examples relevant to small businesses in India.</p></div>
+<table class="tax-table">
+<tr><th>Area</th><th>Purpose</th><th>Key Awareness Point</th></tr>
+<tr><td>GST</td><td>Goods and Services Tax compliance</td><td>Registration, invoices, returns and applicable payments.</td></tr>
+<tr><td>Income Tax</td><td>Reporting taxable business income</td><td>Maintain accurate income and expense records.</td></tr>
+<tr><td>TDS</td><td>Tax Deducted at Source</td><td>Applicable businesses should understand deduction and reporting requirements.</td></tr>
+<tr><td>Digital Records</td><td>Organizing business evidence</td><td>Keep backups and preserve filing acknowledgements.</td></tr>
+</table>
+<p class="notice">Tax rules, forms, thresholds and deadlines can change. Always verify current requirements on official government portals.</p>
+</div>
+</section>
+
+<section id="faq">
+<div class="container">
+<div class="title"><h2>Frequently Asked Questions</h2><p>Quick answers for first-time digital filers.</p></div>
+<div class="faq">
+<details><summary>Is digital tax filing difficult?</summary><p>It can seem difficult initially, but understanding the workflow and keeping records organized makes the process easier.</p></details>
+<details><summary>What should I do if I make a mistake?</summary><p>Do not ignore it. Check the applicable correction or amendment procedure and seek professional advice when required.</p></details>
+<details><summary>Is it safe to file taxes online?</summary><p>Use only official government portals, secure devices and trusted internet connections. Never share passwords, PINs or OTPs.</p></details>
+<details><summary>Do all small businesses have the same tax requirements?</summary><p>No. Requirements can depend on business type, turnover, registration status, transactions and other factors.</p></details>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<div class="title"><h2>Contact / Feedback</h2><p>Use this form as part of your CEP project demonstration.</p></div>
+<div class="contact">
+<div>
+<h3>Project Message</h3>
+<p style="margin-top:12px;color:#617083">This website demonstrates how digital awareness and simple guidance can help small business owners become more comfortable with online tax-related processes.</p>
+<p style="margin-top:18px"><strong>Email:</strong> support@taxease.example</p>
+<p><strong>Working Hours:</strong> Mon–Sat, 10:00 AM–6:00 PM</p>
+</div>
+<form onsubmit="submitForm(event)">
+<label>Name</label><input id="name" required placeholder="Enter your name">
+<label>Email</label><input id="email" type="email" required placeholder="Enter your email">
+<label>Message</label><textarea id="message" required placeholder="Enter your message"></textarea>
+<button class="btn primary" type="submit">Send Feedback</button>
+<p id="formMsg" class="notice"></p>
+</form>
+</div>
+</div>
+</section>
+</main>
+
+
+<section id="feedback" class="info">
+  <div class="container">
+    <div class="title">
+      <h2>Feedback</h2>
+      <p>All submitted feedback is stored in this browser for this demonstration.</p>
+    </div>
+    <div class="card">
+      <h3>Submitted Feedback</h3>
+      <div id="feedbackList" style="margin-top:18px"></div>
+      <p id="noFeedback" class="notice">No feedback has been submitted yet.</p>
+      <button class="btn secondary" type="button" onclick="clearFeedback()" style="margin-top:18px">
+        Clear All Feedback
+      </button>
+    </div>
+  </div>
+</section>
+
+<footer>
+<p>© 2026 TaxEase — Digital Tax Filing Support for Small Businesses</p>
+<p style="margin-top:7px">Educational CEP Project Website</p>
+</footer>
+
+<script>
+function toggleMenu(){document.getElementById('nav').classList.toggle('show')}
+function getFeedback(){
+ return JSON.parse(localStorage.getItem('taxEaseFeedback') || '[]');
+}
+
+function saveFeedback(feedback){
+ localStorage.setItem('taxEaseFeedback', JSON.stringify(feedback));
+}
+
+function submitForm(e){
+ e.preventDefault();
+
+ const name=document.getElementById('name').value.trim();
+ const email=document.getElementById('email').value.trim();
+ const message=document.getElementById('message').value.trim();
+
+ const feedback=getFeedback();
+ feedback.push({
+   id: Date.now(),
+   name: name,
+   email: email,
+   message: message,
+   date: new Date().toLocaleString()
+ });
+
+ saveFeedback(feedback);
+
+ document.getElementById('formMsg').textContent =
+   "Thank you, "+name+"! Your feedback has been recorded.";
+ e.target.reset();
+ displayFeedback();
+}
+
+function displayFeedback(){
+ const list=document.getElementById('feedbackList');
+ const empty=document.getElementById('noFeedback');
+ const feedback=getFeedback();
+
+ if(!feedback.length){
+   list.innerHTML="";
+   empty.style.display="block";
+   return;
+ }
+
+ empty.style.display="none";
+ list.innerHTML=feedback.slice().reverse().map(item => `
+   <div class="card" style="margin-bottom:14px;border-left:4px solid #18a06f">
+     <strong>${escapeHtml(item.name)}</strong>
+     <span style="color:#687789;font-size:13px"> • ${escapeHtml(item.date)}</span>
+     <p style="margin-top:6px"><strong>Email:</strong> ${escapeHtml(item.email)}</p>
+     <p style="margin-top:6px"><strong>Feedback:</strong> ${escapeHtml(item.message)}</p>
+   </div>
+ `).join("");
+}
+
+function escapeHtml(value){
+ return String(value).replace(/[&<>"']/g, function(char){
+   return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[char];
+ });
+}
+
+function clearFeedback(){
+ if(confirm("Are you sure you want to delete all stored feedback?")){
+   localStorage.removeItem('taxEaseFeedback');
+   displayFeedback();
+ }
+}
+displayFeedback();
+
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('show')));
+</script>
+</body>
+</html>
